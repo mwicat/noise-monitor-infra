@@ -1,0 +1,24 @@
+version: "3"
+
+networks:
+  metrics:
+    external: false
+
+services:
+  influxdb:
+    image: influxdb:2.0-alpine
+    container_name: influxdb
+    restart: always
+    networks: [metrics]
+    env_file: ~/.noise-monitor.env
+    ports:
+      - "8086:8086"
+    volumes:
+      - ./influxdb/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./influxdb/dashboards:/influxdb-dashboards
+      - influxdb-data:/var/lib/influxdb2
+      - influxdb-conf:/etc/influxdb2
+
+volumes:
+  influxdb-data:
+  influxdb-conf:
