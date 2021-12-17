@@ -1,3 +1,6 @@
+For microcontroller client-side part of this project a.k.a data acquisition,
+see [noise-monitor-mcu](https://github.com/mwicat/noise-monitor-mcu)
+
 ## Configuration
 
 Create file `~/.noise-monitor.env` and set the contents for your configuration:
