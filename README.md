@@ -25,7 +25,7 @@ docker-compose up
 ### Browser
 
 1. Visit [http://localhost:8086/](http://localhost:8086/)
-2. Locate and open dashboard `Noise levels`
+2. Locate and open dashboard `Noise level`
 
 ### CLI
 
